@@ -1,0 +1,25 @@
+language: php
+php:
+  - '7.1'
+git:
+  submodules: false
+
+cache:
+  bundler: true
+  directories:
+  - $HOME/.composer/cache/files
+  - $HOME/node_modules
+
+branches:
+  only: [master]
+
+before_install:<% if (includeStyles) { %>
+  - npm install -g stylelint stylelint-scss stylelint-order stylelint-selector-bem-pattern<% } %><% if (includeScripts) { %>
+  - npm install -g eslint eslint-config-google<% } %>
+  - composer global require drupal/coder dealerdirect/phpcodesniffer-composer-installer squizlabs/php_codesniffer
+
+script:
+  - set +e<% if (includeStyles) { %>
+  - stylelint "assets/styles/**/*.scss"<% } %><% if (includeScripts) { %>- eslint "assets/scripts/**/*.js"<% } %>
+  - composer global exec -v --  "phpcs --standard=$TRAVIS_BUILD_DIR/phpcs.ruleset.xml --extensions=php $TRAVIS_BUILD_DIR/plugin.php"
+  - composer global exec -v --  "phpcs --standard=$TRAVIS_BUILD_DIR/phpcs.ruleset.xml --extensions=php $TRAVIS_BUILD_DIR/src/"

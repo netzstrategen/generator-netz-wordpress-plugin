@@ -1,0 +1,46 @@
+{
+  "name": "<%= name %>",
+  "title": "<%= title %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "license": "<%= licenseType %>",
+  "author": {
+    "name": "netzstrategen",
+    "email": "hallo@netzstrategen.com",
+    "url": "https://netzstrategen.com"
+  },
+  "repository": "https://github.com/netzstrategen/<%= name %>",
+  "bugs": "https://github.com/netzstrategen/<%= name %>/issues"<% if (includeAssets) { %>,
+  "gulpPaths": {
+    "destDir": "./dist",
+    "styles": {
+      "srcDir": "./assets/styles",
+      "src": [
+        "./assets/styles/**/*.scss"
+      ],
+      "dest": "./dist/styles"
+    },
+    "scripts": {
+      "src": "./assets/scripts/*.js",
+      "dest": "./dist/js"
+    },
+    "fonts": {
+      "src": "./assets/fonts/**/*.{eot,svg,ttf,woff,woff2}",
+      "dest": "./dist/fonts"
+    },
+    "images": {
+      "src": "./assets/imgs/**/*.{jpg,jpeg,png,gif,svg}",
+      "dest": "./dist/imgs"
+    },
+    "templates": "./templates/**/*.twig"
+  },
+  "devDependencies": {
+    "@netzstrategen/gulp-task-collection": "*"<% if (includeScripts) { %>,
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.13.0"<% } %><% if (includeStyles) { %>,
+    "stylelint": "^10.1.0",
+    "stylelint-order": "^3.0.1",
+    "stylelint-scss": "^3.9.2",
+    "stylelint-selector-bem-pattern": "^2.1.0"<% } %>
+  }<% } %>
+}

@@ -1,0 +1,31 @@
+{
+  "name": "generator-netz-wordpress-plugin",
+  "version": "1.0.0",
+  "description": "A WordPress plugin Yeoman generator with netzstrategen standards.",
+  "license": "GPL-3.0",
+  "main": "app/index.js",
+  "repository": "https://github.com/netzstrategen/netz-wordpress-plugin",
+  "author": {
+    "name": "Luca Pipolo",
+    "email": "luca@netzstrategen.com",
+    "url": "https://netzstrategen.com"
+  },
+  "scripts": {},
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "wordpress",
+    "plugin"
+  ],
+  "dependencies": {
+    "axios": "^0.19.0",
+    "chalk": "^1.0.0",
+    "yeoman-generator": "^0.19.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
