@@ -9,8 +9,12 @@ $ npm install -g yo generator-netz-wordpress-plugin
 
 ## Usage
 ```
+$ cd wp-content/plugins
+$ mkdir custom
+$ cd custom
 $ yo netz-wordpress-plugin
 ```
+The files are generated in the current working directory.
 
 ## Features
 - If the generated plugin supports assets, the [gulp-task-collection](https://github.com/netzstrategen/gulp-task-collection)
