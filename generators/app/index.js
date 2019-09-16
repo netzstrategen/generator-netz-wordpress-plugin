@@ -104,7 +104,7 @@ module.exports = yeoman.generators.Base.extend({
       function camelize (string) {
         return string.replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
           return word.toUpperCase();
-        }).replace(/\s+/g, '');
+        }).replace(/\s+_-/g, '');
       }
       this.namespace = camelize(answers.name);
     }.bind(this));
