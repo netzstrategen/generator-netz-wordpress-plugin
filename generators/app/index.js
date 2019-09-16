@@ -221,6 +221,12 @@ module.exports = yeoman.generators.Base.extend({
         }
       );
       this.fs.copyTpl(
+        this.templatePath('languages/_plugin.pot'),
+        this.destinationPath('languages/' + this.props.name.replace(/\s+/g, '-').toLowerCase() + '.pot'), {
+          name: this.props.name.replace(/\s+/g, '-').toLowerCase()
+        }
+      );
+      this.fs.copyTpl(
         this.templatePath('src/_Plugin.php'),
         this.destinationPath('src/Plugin.php'), {
           text_domain: this.props.name.replace(/\s+/g, '-').toLowerCase(),
