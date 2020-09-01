@@ -4,7 +4,7 @@
   "description": "A WordPress plugin Yeoman generator with netzstrategen standards.",
   "license": "GPL-3.0",
   "main": "app/index.js",
-  "repository": "https://github.com/netzstrategen/netz-wordpress-plugin",
+  "repository": "https://github.com/netzstrategen/generator-netz-wordpress-plugin",
   "author": {
     "name": "Luca Pipolo",
     "email": "luca@netzstrategen.com",
