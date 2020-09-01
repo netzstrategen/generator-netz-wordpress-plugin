@@ -1,6 +1,6 @@
 {
   "name": "generator-netz-wordpress-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A WordPress plugin Yeoman generator with netzstrategen standards.",
   "license": "GPL-3.0",
   "main": "app/index.js",
