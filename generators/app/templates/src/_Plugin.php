@@ -32,9 +32,6 @@ class Plugin {
    * @implements init
    */
   public static function init() {
-    if (is_admin()) {
-      return;
-    }
   }
 
   /**
