@@ -18,7 +18,6 @@ class Admin {
    * @implements admin_init
    */
   public static function init() {
-
   }
 
 }

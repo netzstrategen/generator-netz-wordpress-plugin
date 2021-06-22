@@ -39,7 +39,7 @@ register_deactivation_hook(__FILE__, __NAMESPACE__ . '\Schema::deactivate');
 register_uninstall_hook(__FILE__, __NAMESPACE__ . '\Schema::uninstall');
 
 add_action('plugins_loaded', __NAMESPACE__ . '\Plugin::loadTextdomain');
-add_action('init', __NAMESPACE__ . '\Plugin::init', 20);
+add_action('init', __NAMESPACE__ . '\Plugin::init');
 <% if (includeAdmin) { %>add_action('admin_init', __NAMESPACE__ . '\Admin::init');<% } %><% if (includeAdmin) { %>
 
 if (defined('WP_CLI') && WP_CLI) {
