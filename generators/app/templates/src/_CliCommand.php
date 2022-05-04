@@ -7,10 +7,12 @@
 
 namespace Netzstrategen\<%= namespace %>;
 
+use WP_CLI_Command;
+
 /**
- * WP CLI commands.
+ * WP-CLI commands.
  */
-class CliCommand {
+class CliCommand extends WP_CLI_Command {
 
 
 }

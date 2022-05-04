@@ -1,16 +1,23 @@
 # WordPress Plugin Yeoman Generator
-With this Yeoman Generator, it is possible to easily scaffolding a WordPress plugin
+With this Yeoman Generator, it is possible to easily scaffold a WordPress plugin
 following the netzstrategen coding standards.
 
 ## Installation
-- `npm install -g yo`
-- `npm install -g generator-netz-wordpress-plugin`
+```
+$ npm install -g yo generator-netz-wordpress-plugin
+```
 
-## Use
-- `yo netz-wordpress-plugin`
+## Usage
+```
+$ cd wp-content/plugins
+$ mkdir custom
+$ cd custom
+$ yo netz-wordpress-plugin
+```
+The files are generated in the current working directory.
 
 ## Features
-- The generated plugin can optionally have assets. In that case, [gulp-task-collection](https://github.com/netzstrategen/gulp-task-collection)
-NPM package is installed. Also, netzstrategen ESLint and Stylelint standards are included.
-- It's possible to automatically create frequently used PHP Classes (e.g. `Admin`, `WooCommerce`, `CliCommand`).
-- A Travis configuration file is automatically generated. It makes the plugin ready to be tested.
+- If the generated plugin supports assets, the [gulp-task-collection](https://github.com/netzstrategen/gulp-task-collection)
+  package is installed and the netzstrategen ESLint and Stylelint rules are included.
+- Frequently used PHP classes can be automatically created (e.g. `Admin`, `WooCommerce`, `CliCommand`).
+- The automatically genereated Travis configuration file makes the plugin ready to be tested.

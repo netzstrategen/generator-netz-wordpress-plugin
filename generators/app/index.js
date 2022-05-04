@@ -104,7 +104,7 @@ module.exports = yeoman.generators.Base.extend({
       function camelize (string) {
         return string.replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
           return word.toUpperCase();
-        }).replace(/\s+/g, '');
+        }).replace(/\s+_-/g, '');
       }
       this.namespace = camelize(answers.name);
     }.bind(this));
@@ -218,6 +218,12 @@ module.exports = yeoman.generators.Base.extend({
           licenseType: this.licenseType,
           licenseURL: this.licenseURL,
           includeAdmin: this.includeAdmin
+        }
+      );
+      this.fs.copyTpl(
+        this.templatePath('languages/_plugin.pot'),
+        this.destinationPath('languages/' + this.props.name.replace(/\s+/g, '-').toLowerCase() + '.pot'), {
+          name: this.props.name.replace(/\s+/g, '-').toLowerCase()
         }
       );
       this.fs.copyTpl(
